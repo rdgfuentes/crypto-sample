@@ -5,18 +5,21 @@
       <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title>
-            {{card.title}}
+            {{card.coin.coinName}}
             <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
               <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
+              <button mat-menu-item>Details</button>
             </mat-menu>
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
+          <div>
+            <img [src]="card.coin.imageUrl" height="150px"/>
+            <div><strong>Symbol:</strong> {{card.coin.symbol}}</div>
+            <div><strong>Algorithm:</strong> {{card.coin.algorithm}}</div>
+          </div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>

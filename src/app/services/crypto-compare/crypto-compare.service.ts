@@ -22,6 +22,8 @@ export class CryptoCompareService {
         map(x =>
           Object.values(x.data)
             .filter(y => y.sortOrder <= 100)
+            // sort list
+            .sort((a, b) => a.sortOrder - b.sortOrder)
             .map(y => {
               y.imageUrl = x.baseImageUrl + y.imageUrl;
               return y;
