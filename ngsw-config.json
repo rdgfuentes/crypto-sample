@@ -1,5 +1,19 @@
 {
   "index": "/index.html",
+  "dataGroups": [
+    {
+      "name": "CryptoCompareApi",
+      "urls": [
+        "https://min-api.cryptocompare.com/data/**"
+      ],
+      "version": 1,
+      "cacheConfig": {
+        "maxSize": "10",
+        "maxAge": "30m",
+        "strategy": "performance"
+      }
+    }
+  ],
   "assetGroups": [
     {
       "name": "app",
