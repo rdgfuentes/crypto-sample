@@ -2,6 +2,8 @@
 
 Aplicación de ejepmplo para utilizar las características de PWA brindadas por Angular, utilizando @angular/cli, @angular/material y @angular/pwa.
 
+Probá la [Demo](https://crypto-sample-rb9jq7dh1.now.sh/) publicada en [Now - Global Serverless Deployments](https://zeit.co/now) 
+
 
 ## Pre-requisitos
 [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
