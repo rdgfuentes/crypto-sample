@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort } from '@angular/material';
 import { CoinListDataSource } from './coin-list-datasource';
+import { CryptoCompareService } from '../services/crypto-compare/crypto-compare.service';
 
 @Component({
   selector: 'app-coin-list',
@@ -13,9 +14,12 @@ export class CoinListComponent implements OnInit {
   dataSource: CoinListDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['rank', 'logo', 'name', 'coinName', 'algorithm'];
 
+  constructor(
+    private coinService: CryptoCompareService,
+  ) {}
   ngOnInit() {
-    this.dataSource = new CoinListDataSource(this.paginator, this.sort);
+    this.dataSource = new CoinListDataSource(this.coinService, this.paginator, this.sort);
   }
 }
