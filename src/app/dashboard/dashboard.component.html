@@ -15,8 +15,10 @@
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
+          <div class="coin-logo">
+            <img [src]="card.coin.imageUrl"/>
+          </div>
           <div>
-            <img [src]="card.coin.imageUrl" height="150px"/>
             <div><strong>Symbol:</strong> {{card.coin.symbol}}</div>
             <div><strong>Algorithm:</strong> {{card.coin.algorithm}}</div>
           </div>
