@@ -1,5 +1,45 @@
 # CryptoSample
 
+Aplicación de ejepmplo para utilizar las características de PWA brindadas por Angular.
+
+## Pasos
+
+### Crear una nueva Angular app (paso-01)
+```
+ng new crypto-sample --routing --style=scss
+```
+`git checkout paso-01`
+
+### Agregar soporte para Angular Material
+```
+ng add @angular/material
+```
+`git checkout paso-02`
+
+### Generar componentes custom de Material para la app
+```
+ng generate @angular/material:nav app-nav
+ng generate @angular/material:nav nav
+ng generate @angular/material:dashboard dashboard
+ng generate @angular/material:table coin-list
+```
+`git checkout paso-04`
+
+### Agregar servicio que se conecta con la API externa
+```
+ng g s services/crypto-compare
+ng g i services/crypto-compare-response
+ng g i services/crypto-compare/crypto-compare-response
+```
+`git checkout paso-07`
+
+### Agregar soporte para PWA a nuestra app
+```
+ng add @angular/pwa
+```
+`git checkout paso-08`
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
 ## Development server
